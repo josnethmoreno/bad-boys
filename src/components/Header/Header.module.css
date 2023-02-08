@@ -1,0 +1,36 @@
+.header * {
+  outline: 1px solid transparent;
+}
+
+.header {
+  text-transform: uppercase;
+  margin: 1rem;
+}
+
+.menu {
+  display: grid;
+  grid-template-columns: 1fr 1fr .8fr;
+}
+
+.menu-brand {
+  font-size: var(--text-1);
+  font-weight: 500;
+  line-height: 1;
+}
+
+.menu-links {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.menu-links ul {
+  display: flex;
+  gap: 3rem;
+  font-size: var(--text-3);
+}
+
+.menu-links span {
+  font-size: var(--text-small);
+  line-height: 1.2;
+}

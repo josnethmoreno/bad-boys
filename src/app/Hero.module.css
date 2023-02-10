@@ -1,0 +1,4 @@
+.hero {
+  border-top: .5rem solid var(--fg-color);
+  border-bottom: .5rem solid var(--fg-color);
+}

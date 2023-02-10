@@ -11,16 +11,21 @@
 
   font-size: 1.2vw;
 
-  --text-1: max(2.5rem, 20.83px);
-  --text-2: clamp(2.33rem, calc(1.77rem + 2.81vw), 3.95rem);
-  --text-3: max(1.3rem, 18px);
-  --text-body: clamp(1.13rem, calc(1.08rem + 0.22vw), 1.25rem);
-  --text-small: max(.6rem, 12px);
+  --text-1: 2.5rem;
+  --text-2: 2.33rem;
+  --text-3: 1.3rem;
+  --text-body: 1rem;
+  --text-small: .8rem;
+}
+
+.root.dark {
+	--bg-color: var(--black);
+	--fg-color: var(--white);
 }
 
 :root.light {
-  --bg-color: var(--black);
-  --fg-color: var(--white);
+  --bg-color: var(--white);
+  --fg-color: var(--black);
 }
 
 :root.artic {
@@ -28,7 +33,14 @@
   --fg-color: var(--black);
 }
 
+@media (max-width: 800px) {
+  :root {
+    font-size: 3.6vw;
+  }
+}
+
 body {
+  padding: 0 1rem;
 	font-family: var(--font-body), sans-serif;
 	color: var(--fg-color);
 	background-color: var(--bg-color);

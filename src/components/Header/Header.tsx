@@ -1,18 +1,18 @@
 import Link from 'next/link'
 import Anchor from '../Anchor/Anchor'
-import styles from './Header.module.css'
+import style from './Header.module.css'
 
 export default function Header() {
 	return (
-		<header className={styles.header}>
-			<nav className={styles.menu}>
-				<div className={styles['menu-brand']}>
+		<header className={style.header}>
+			<nav className={style.menu}>
+				<div className={style['menu-brand']}>
 					<Link href='/'>
 						We ride together. <br />
 						We die together.
 					</Link>
 				</div>
-				<div className={styles['menu-links']}>
+				<div className={style['menu-links']}>
 					<ul>
 						<li>
 							<Anchor url="/" text="Shop" />
@@ -32,12 +32,12 @@ export default function Header() {
 						movie merch store
 					</span>
 				</div>
-				<div className={styles['menu-cart']}>
-					<p>Cart usd 0 items</p>
-					<div className={styles['menu-theme']}>
-						<button></button>
-						<button></button>
-						<button></button>
+				<div className={style['menu-actions']}>
+					<button>Cart usd 0 items</button>
+					<div className={style['menu-theme']}>
+						<button data-theme="black"></button>
+						<button data-theme="white"></button>
+						<button data-theme="artic"></button>
 					</div>
 				</div>
 			</nav>

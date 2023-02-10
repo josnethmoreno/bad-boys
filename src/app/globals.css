@@ -1,5 +1,4 @@
 :root {
-
 	--black: hsl(0, 0%, 0%);
 	--white: hsl(100, 100%, 100%);
 	--artic-lime: hsl(69, 97%, 56%);
@@ -9,13 +8,16 @@
 
 	--font-body: 'Manrope';
 
-  font-size: 1.2vw;
+	font-size: 1.2vw;
+	--text-1: 2.5rem;
+	--text-2: 2.33rem;
+	--text-3: 1.3rem;
+	--text-body: 1rem;
+	--text-small: 0.8rem;
 
-  --text-1: 2.5rem;
-  --text-2: 2.33rem;
-  --text-3: 1.3rem;
-  --text-body: 1rem;
-  --text-small: .8rem;
+  --spacer-1: 1.8rem; 
+  --spacer-2: 1.2rem; 
+  --spacer-3: .6rem; 
 }
 
 .root.dark {
@@ -24,23 +26,27 @@
 }
 
 :root.light {
-  --bg-color: var(--white);
-  --fg-color: var(--black);
+	--bg-color: var(--white);
+	--fg-color: var(--black);
 }
 
 :root.artic {
-  --bg-color: var(--artic-lime);
-  --fg-color: var(--black);
+	--bg-color: var(--artic-lime);
+	--fg-color: var(--black);
 }
 
 @media (max-width: 800px) {
-  :root {
-    font-size: 3.6vw;
-  }
+	:root {
+		--text-1: 7.5rem;
+		--text-2: 6.99rem;
+		--text-3: 3.9rem;
+		--text-body: 3rem;
+		--text-small: 2.4rem;
+	}
 }
 
 body {
-  padding: 0 1rem;
+	padding: 0 var(--spacer-2);
 	font-family: var(--font-body), sans-serif;
 	color: var(--fg-color);
 	background-color: var(--bg-color);

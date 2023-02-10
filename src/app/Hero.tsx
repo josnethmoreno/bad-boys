@@ -1,12 +1,11 @@
-
 import style from './Hero.module.css'
-import logo from '/public/logo.svg'
 
-import Image from 'next/image'
+import Logo from '@/components/Logo/Logo'
 
 export default function Hero() {
   return (
     <section className={style.hero}>
+      <Logo />
     </section>
   )
 }

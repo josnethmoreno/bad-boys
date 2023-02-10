@@ -1,4 +1,5 @@
 .hero {
+  padding: .4rem 0;
   border-top: .5rem solid var(--fg-color);
   border-bottom: .5rem solid var(--fg-color);
 }

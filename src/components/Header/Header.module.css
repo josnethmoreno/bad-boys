@@ -1,6 +1,6 @@
 .header {
   text-transform: uppercase;
-  padding: 1rem 0;
+  padding: var(--spacer-2) 0;
 }
 
 .menu {
@@ -38,7 +38,7 @@
 }
 
 .menu-actions > button{
-  color: var(--white);
+  color: var(--fg-color);
   font-size: var(--text-3);
   text-transform: uppercase;
   text-align: left;

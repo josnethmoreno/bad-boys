@@ -1,4 +1,4 @@
-import styles from './Anchor.module.css'
+import style from './Anchor.module.css'
 import Link from 'next/link'
 
 interface Props {
@@ -8,7 +8,7 @@ interface Props {
 
 export default function Anchor({ url, text }: Props) {
 	return (
-		<Link href={url} className={styles.anchor}>
+		<Link href={url} className={style.anchor}>
 			{text}
 		</Link>
 	)

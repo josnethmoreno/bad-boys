@@ -1,0 +1,10 @@
+.jumbo {
+  padding-top: 1rem;
+  position: relative;
+}
+
+.jumbo figure {
+  position: relative;
+  object-fit: cover;
+  aspect-ratio: 2 / 1.08;
+}

@@ -1,0 +1,17 @@
+.shop-grid {
+  padding-top: 1rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.product {
+  position: relative;
+  height: auto;
+  aspect-ratio: 1 / 1;
+  object-fit: contain;
+  background-color: var(--fg-color);
+}
+
+.product-title {
+}

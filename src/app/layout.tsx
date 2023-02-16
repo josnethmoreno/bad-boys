@@ -2,8 +2,10 @@ import './globals.css'
 import './reset.css'
 
 import { Manrope } from '@next/font/google'
-
 const manrope = Manrope({ subsets: ['latin'] })
+
+import Header from '@/components/Header/Header'
+import Footer from '@/components/Footer/Footer'
 
 export default function RootLayout({
   children,
@@ -12,12 +14,12 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className='dark'>
-      {/*
-        <head /> will contain the components returned by the nearest parent
-        head.tsx. Find out more at https://beta.nextjs.org/docs/api-reference/file-conventions/head
-      */}
       <head />
-      <body className={manrope.className}>{children}</body>
+      <body>
+        <Header />
+        {children}
+        <Footer />
+      </body>
     </html>
   )
 }

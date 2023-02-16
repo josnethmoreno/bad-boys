@@ -6,7 +6,7 @@ export function Form() {
 		<form className={style.form}>
 			<p>We ride together. We die together</p>
 			<div>
-				<input type='mail' />
+				<input type='mail' placeholder='email'/>
 				<Button text='Subscribe' size='sm'/>
 			</div>
 		</form>

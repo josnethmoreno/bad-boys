@@ -1,8 +1,30 @@
+.footer {
+  padding: 2rem 0;
+}
+
+.form {
+  display: flex;
+  flex-flow: column;
+  gap: 1rem;
+}
+
+.form p{
+  text-transform: uppercase;
+  font-size: var(--text-small);
+}
+
 .form div {
   display: flex;
+  gap: .6rem;
 }
 
 .form input {
-  background-color: trans
-  ;
+  background-color: transparent;
+  outline: none;
+  border: none;
+  border-bottom: 1px solid var(--fg-color);
+}
+
+.form input::placeholder{
+  color: var(--fg-color);
 }

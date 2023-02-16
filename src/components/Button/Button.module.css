@@ -6,4 +6,9 @@
 .button[data-size="sm"] {
   color: var(--fg-color);
   border: 1px solid var(--fg-color);
+  transition: .3s;
+}
+
+.button[data-size="sm"]:hover {
+  background: var(--lighter-color);
 }

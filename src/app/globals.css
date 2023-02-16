@@ -2,9 +2,11 @@
 	--black: hsl(0, 0%, 0%);
 	--white: hsl(100, 100%, 100%);
 	--artic-lime: hsl(69, 97%, 56%);
+	--gray: hsla(0, 0%, 50%, .4);
 
 	--bg-color: var(--black);
 	--fg-color: var(--white);
+	--lighter-color: var(--gray);
 
 	--font-body: 'Manrope';
 
@@ -13,6 +15,7 @@
 	--text-2: 2.33rem;
 	--text-3: 1.3rem;
 	--text-body: 1rem;
+	--text-medium: 0.9rem;
 	--text-small: 0.8rem;
 
   --spacer-1: 1.8rem; 
@@ -23,11 +26,13 @@
 .root.dark {
 	--bg-color: var(--black);
 	--fg-color: var(--white);
+	--lighter-color: var(--gray)
 }
 
 :root.light {
 	--bg-color: var(--white);
 	--fg-color: var(--black);
+	--lighter-color: var(--gray)
 }
 
 :root.artic {

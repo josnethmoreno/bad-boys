@@ -8,8 +8,6 @@
 	--fg-color: var(--white);
 	--lighter-color: var(--gray);
 
-	--font-body: 'Manrope';
-
 	font-size: 1.2vw;
 	--text-1: 2.5rem;
 	--text-2: 2.33rem;
@@ -52,7 +50,6 @@
 
 body {
 	padding: 0 var(--spacer-2);
-	font-family: var(--font-body), sans-serif;
 	color: var(--fg-color);
 	background-color: var(--bg-color);
 }

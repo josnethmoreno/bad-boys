@@ -9,7 +9,7 @@ import Jumbo from '@/components/Jumbo/Jumbo'
 
 export default function Shop() {
 	return (
-		<section className={style.shop}>
+		<section className={style.shop} id="top">
 			<div className={` ${style['shop-grid']}`}>
 				<Product url={'/product/1'} img={'/shop/1.png'} title={'BB Hoodie'} />
 				<Product url={'/product/2'} img={'/shop/2.png'} title={'BB Hoodie'} />

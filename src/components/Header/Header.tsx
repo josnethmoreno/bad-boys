@@ -4,7 +4,7 @@ import style from './Header.module.css'
 
 export default function Header() {
 	return (
-		<header className={style.header}>
+		<header className={style.header} id="top">
 			<nav className={style.menu}>
 				<div className={style['menu-brand']}>
 					<Link href='/'>

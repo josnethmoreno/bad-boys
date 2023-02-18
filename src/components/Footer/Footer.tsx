@@ -1,3 +1,5 @@
+'use client'
+
 import style from './Footer.module.css'
 
 import Button from '../Button/Button'
@@ -16,6 +18,12 @@ export function Form() {
 }
 
 export function Links() {
+	const scrollToTop = () => {
+		window.scrollTo({
+			top: 0,
+			behavior: "smooth"
+	});
+	}
 	return (
 		<nav className={style.links}>
 			<div>
@@ -35,7 +43,7 @@ export function Links() {
 					<Anchor url='/faq' text='Twitter' />
 				</div>
 			</div>
-			<button>
+			<button onClick={scrollToTop}>
 				<svg
 					xmlns='http://www.w3.org/2000/svg'
 					height='32'

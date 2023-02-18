@@ -1,10 +1,12 @@
+import style from './Header.module.css'
+
 import Link from 'next/link'
 import Anchor from '../Anchor/Anchor'
-import style from './Header.module.css'
+import Cart from '../Cart/Cart'
 
 export default function Header() {
 	return (
-		<header className={style.header} id="top">
+		<header className={style.header}>
 			<nav className={style.menu}>
 				<div className={style['menu-brand']}>
 					<Link href='/'>
@@ -41,6 +43,7 @@ export default function Header() {
 					</div>
 				</div>
 			</nav>
+			<Cart />
 		</header>
 	)
 }

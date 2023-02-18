@@ -15,8 +15,8 @@ export default function RootLayout({
   return (
     <html lang="en" className='dark'>
       <head />
-      <body className={manrope.className} id="top">
-        <Header />
+      <body className={manrope.className}>
+        <Header/>
         {children}
         <Footer />
       </body>

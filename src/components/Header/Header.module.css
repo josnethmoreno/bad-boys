@@ -1,4 +1,5 @@
 .header {
+  position: relative;
   text-transform: uppercase;
   padding: var(--spacer-2) 0;
 }

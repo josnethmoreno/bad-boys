@@ -1,14 +1,23 @@
 .button {
-  padding: .1rem 1.8rem;
   border-radius: 10px;
 }
 
-.button[data-size="sm"] {
+.button[data-type="fill"] {
+  padding: .4rem 1.8rem;
+  color: var(--fg-color);
+  background-color: var(--accent-color);
+  font-size: var(--text-3);
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+.button[data-type="outline"] {
+  padding: .1rem 1.8rem;
   color: var(--fg-color);
   border: 1px solid var(--fg-color);
   transition: .3s;
 }
 
-.button[data-size="sm"]:hover {
+.button[data-type="outline"]:hover {
   background: var(--lighter-color);
 }

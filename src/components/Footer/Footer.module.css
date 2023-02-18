@@ -18,7 +18,7 @@
 
 .form p {
 	text-transform: uppercase;
-	font-size: var(--text-medium);
+	font-size: var(--text-body);
 }
 
 .form div {
@@ -44,7 +44,7 @@
 .links > div {
   display: flex;
   gap: 3rem;
-  padding-right: 8rem;
+  padding-right: 6rem;
 }
 
 .links div div{
@@ -55,7 +55,7 @@
 
 .links a {
 	align-self: self-start;
-  font-size: var(--text-medium);
+  font-size: var(--text-body);
 }
 
 .links button {
@@ -78,11 +78,11 @@
 
 .data a{
   align-self: self-start;
-  font-size: var(--text-medium);
+  font-size: var(--text-body);
 }
 
 .data p {
-  width: 30ch;
+  width: 25ch;
   font-size: .7rem;
 }
 

@@ -2,12 +2,15 @@
 	--black: hsl(0, 0%, 0%);
 	--white: hsl(100, 100%, 100%);
 	--artic-lime: hsl(69, 97%, 56%);
+	--red: hsl(0, 100%, 50%);
 	--gray: hsla(0, 0%, 50%, .4);
 
 	--bg-color: var(--black);
 	--fg-color: var(--white);
+	--accent-color: var(--red);
 	--lighter-color: var(--gray);
 
+	--font-family: 'Roboto Condensed';
 	font-size: 1.2vw;
 	--text-1: 2.5rem;
 	--text-2: 2.33rem;
@@ -24,18 +27,17 @@
 .root.dark {
 	--bg-color: var(--black);
 	--fg-color: var(--white);
-	--lighter-color: var(--gray)
 }
 
 :root.light {
 	--bg-color: var(--white);
 	--fg-color: var(--black);
-	--lighter-color: var(--gray)
 }
 
 :root.artic {
 	--bg-color: var(--artic-lime);
 	--fg-color: var(--black);
+	--lighter-color: var(--gray)
 }
 
 @media (max-width: 800px) {
@@ -49,6 +51,7 @@
 }
 
 body {
+	font-family: var(--font-family);
 	padding: 0 var(--spacer-2);
 	color: var(--fg-color);
 	background-color: var(--bg-color);

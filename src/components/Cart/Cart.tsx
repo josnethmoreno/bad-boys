@@ -1,5 +1,15 @@
+import Image from 'next/image'
+
 import Button from '../Button/Button'
 import style from './Cart.module.css'
+
+import Abstract from '/cart/abstract.svg'
+import palmer from '/cart/palmer.svg'
+import barcode from '/cart/barcode.svg'
+
+interface SVG {
+  abstract: string
+}
 
 export default function Cart() {
   return (
@@ -21,7 +31,7 @@ export default function Cart() {
           <span>$0 USD</span>
         </p>
         <div>
-
+          <Image />
         </div>
       </footer>
     </div>

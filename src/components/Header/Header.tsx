@@ -1,3 +1,6 @@
+'use client'
+
+import { useState } from 'react'
 import style from './Header.module.css'
 
 import Link from 'next/link'
@@ -5,6 +8,12 @@ import Anchor from '../Anchor/Anchor'
 import Cart from '../Cart/Cart'
 
 export default function Header() {
+  const [showCart, setShowCart] = useState(false)
+
+	const handleShowCart = () => {
+		setShowCart(!showCart)
+	}
+
 	return (
 		<header className={style.header}>
 			<nav className={style.menu}>
@@ -35,7 +44,7 @@ export default function Header() {
 					</span>
 				</div>
 				<div className={style['menu-actions']}>
-					<button>Cart usd 0 items</button>
+					<button onClick={handleShowCart}>Cart usd 0 items</button>
 					<div className={style['menu-theme']}>
 						<button data-theme="black"></button>
 						<button data-theme="white"></button>
@@ -43,7 +52,7 @@ export default function Header() {
 					</div>
 				</div>
 			</nav>
-			<Cart />
+			<Cart show={showCart} setShow={handleShowCart}/>
 		</header>
 	)
 }

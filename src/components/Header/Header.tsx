@@ -8,7 +8,7 @@ import Anchor from '../Anchor/Anchor'
 import Cart from '../Cart/Cart'
 
 export default function Header() {
-  const [showCart, setShowCart] = useState(false)
+  const [showCart, setShowCart] = useState<Boolean>(false)
 
 	const handleShowCart = () => {
 		setShowCart(!showCart)
@@ -52,7 +52,7 @@ export default function Header() {
 					</div>
 				</div>
 			</nav>
-			<Cart show={showCart} setShow={handleShowCart}/>
+			<Cart show={showCart} setShow={setShowCart}/>
 		</header>
 	)
 }

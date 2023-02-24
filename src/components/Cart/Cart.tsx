@@ -1,17 +1,14 @@
-'use client'
-
 import Button from '../Button/Button'
 import { Close, Lines, Barcode, Palmer } from '../Icons/Icons'
 
 import style from './Cart.module.css'
 
 interface Props {
-  show: boolean,
-  setShow: any
+  show: Boolean,
+  setShow: Function
 }
 
 export default function Cart({show, setShow} : Props) {
-
   return (
     <div className={style.cart} data-show={show}>
       <header className={style['cart-header']}>
@@ -20,7 +17,7 @@ export default function Cart({show, setShow} : Props) {
           <span>Marcus: Mike, you dont need a grenade launcher.</span>
           <span>Mike: Yeah, but i want one</span>
         </p>
-        <button onClick={setShow(false)}>
+        <button onClick={() => setShow(false)}>
           <Close/>
         </button>
       </header>

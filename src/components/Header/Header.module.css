@@ -2,6 +2,7 @@
   position: relative;
   text-transform: uppercase;
   padding: var(--spacer-2) 0;
+  border-bottom: .5rem solid var(--fg-color);
 }
 
 .menu {
@@ -24,7 +25,7 @@
 .menu-links ul {
   display: flex;
   gap: 3rem;
-  font-size: var(--text-3);
+  font-size: var(--text-5);
 }
 
 .menu-links span {
@@ -40,7 +41,7 @@
 
 .menu-actions > button{
   color: var(--fg-color);
-  font-size: var(--text-3);
+  font-size: var(--text-5);
   text-transform: uppercase;
   text-align: left;
   font-weight: 500;

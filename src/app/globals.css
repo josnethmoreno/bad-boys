@@ -3,7 +3,7 @@
 	--white: hsl(100, 100%, 100%);
 	--artic-lime: hsl(69, 97%, 56%);
 	--red: hsl(0, 100%, 50%);
-	--gray: hsla(0, 0%, 50%, .4);
+	--gray: hsla(0, 0%, 50%, 0.4);
 
 	--bg-color: var(--black);
 	--fg-color: var(--white);
@@ -14,14 +14,16 @@
 	font-size: 1.2vw;
 	--text-1: 2.5rem;
 	--text-2: 2.33rem;
-	--text-3: 1.3rem;
+	--text-3: 2rem;
+	--text-4: 1.7rem;
+	--text-5: 1.3rem;
 	--text-body: 1rem;
 	--text-medium: 0.9rem;
 	--text-small: 0.8rem;
 
-  --spacer-1: 1.8rem; 
-  --spacer-2: 1.2rem; 
-  --spacer-3: .6rem; 
+	--spacer-1: 1.8rem;
+	--spacer-2: 1.2rem;
+	--spacer-3: 0.6rem;
 }
 
 .root.dark {
@@ -37,7 +39,7 @@
 :root.artic {
 	--bg-color: var(--artic-lime);
 	--fg-color: var(--black);
-	--lighter-color: var(--gray)
+	--lighter-color: var(--gray);
 }
 
 @media (max-width: 800px) {

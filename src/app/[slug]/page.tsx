@@ -27,21 +27,28 @@ export default function Product() {
 				</header>
 				<div className={style['product-style']}>
 					<span>Style: lime</span>
-					<button data-style='lime'></button>
-					<button data-style='oatmeal'></button>
+					<button data-style='lime' data-active="true"></button>
+					<button data-style='oatmeal' data-active="false"></button>
 				</div>
 				<div className={style['product-size']}>
 					<span>Size: </span>
 					<div>
-						<button className={style['size-button']}>sm</button>
-						<button className={style['size-button']}>md</button>
-						<button className={style['size-button']}>lg</button>
-						<button className={style['size-button']}>xl</button>
-						<button className={style['size-button']}>xxl</button>
+						<button className={style['size-button']} data-active="true">sm</button>
+						<button className={style['size-button']} data-active="false">md</button>
+						<button className={style['size-button']} data-active="false">lg</button>
+						<button className={style['size-button']} data-active="false">xl</button>
+						<button className={style['size-button']} data-active="false">xxl</button>
 					</div>
 					<Button text='Add to cart' type='fill' />
 				</div>
-        <div className={style['product-caption']}></div>
+				<div className={style['product-caption']}>
+					We ride together. We die together. We got the whole damn story printed
+					on the back of this tee. Featuring the official 25th Anniversary logo
+					on the front. White ink printed on black cotton. Available for 10 days
+					only. <br></br><br></br> 🙏 This is a limited edition production run. Printing starts
+					when the drop ends. Reminder: Bad Boys for Life. Shipping may take 10+
+					days due to COVID-19.
+				</div>
 			</div>
 		</section>
 	)

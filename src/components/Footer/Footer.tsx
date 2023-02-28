@@ -11,7 +11,7 @@ export function Form() {
 			<p>We ride together. We die together</p>
 			<div>
 				<input type='mail' placeholder='email' />
-				<Button text='Subscribe' size='sm' />
+				<Button text='Subscribe' type='outline' />
 			</div>
 		</form>
 	)

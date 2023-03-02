@@ -46,8 +46,8 @@ export function Close() {
 			<path
 				d='M23.5 0V47'
 				stroke='var(--fg-color)'
-				stroke-width='2'></path>
-			<path d='M47 23.5L0 23.5' stroke='var(--fg-color)' stroke-width='2'></path>
+				strokeWidth='2'></path>
+			<path d='M47 23.5L0 23.5' stroke='var(--fg-color)' strokeWidth='2'></path>
 		</svg>
 	)
 }

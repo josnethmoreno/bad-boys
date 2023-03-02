@@ -1,6 +1,6 @@
 'use client'
 
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 
 import Button from '@/components/Button/Button'
 import Image from 'next/image'
@@ -8,10 +8,12 @@ import Image from 'next/image'
 import style from './page.module.css'
 
 export default function Product() {
-	const [productSize, setProductSize] = useState<String>('')
-	const [productStyle, setProductStyle] = useState<String>('')
+	const [sizes, setSizes] = useState<Array<Object>>([])
+	const [styles, setStyles] = useState<Array<Object>>([])
+	const [selectSize, setSelectSize] = useState<String>('')
+	const [selectStyle, setSelectStyle] = useState<String>('')
 
-	const sizes = [
+	const productSizes = [
 		{
 			name: 'sm',
 			active: 'true',
@@ -34,7 +36,7 @@ export default function Product() {
 		},
 	]
 
-	const styles = [
+	const productStyles = [
 		{
 			name: 'lime',
 			active: 'true',
@@ -44,6 +46,11 @@ export default function Product() {
 			active: 'false',
 		},
 	]
+
+	useEffect(() => {
+		setSizes(productSizes)
+		setStyles(productStyles)
+	}, [])
 
 	return (
 		<section className={style.product}>
@@ -67,12 +74,13 @@ export default function Product() {
 					<span>$35.00</span>
 				</header>
 				<div className={style['product-style']}>
-					<span>Style: {productStyle}</span>
-					<button data-style='lime' data-active="true"></button>
-					<button data-style='oatmeal' data-active="false"></button>
+					<span>Style: {selectStyle}</span>
+					{styles.map((style) => (
+						<button key={style.name} data-style={style.name} data-active={style.active}></button>
+					))}
 				</div>
 				<div className={style['product-size']}>
-					<span>Size: {productSize} </span>
+					<span>Size: {selectSize} </span>
 					<div>
 						{sizes.map((size) => (
 							<button key={size.name} className={style['size-button']} data-active={size.active}>{size.name}</button>

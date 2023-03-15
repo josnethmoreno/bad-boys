@@ -29,7 +29,7 @@
 .product-header {
 	display: flex;
 	justify-content: space-between;
-	font-size: var(--text-3);
+	font-size: var(--text-2);
 }
 
 .product-header h3 {
@@ -37,6 +37,23 @@
 	max-width: 20ch;
   line-height: 1;
 	font-weight: 500;
+}
+
+.product-header span {
+	font-weight: 500;
+	font-size: var(--text-2);
+}
+
+.product-container {
+	display: flex;
+	justify-content: space-between;
+}
+
+.product-container > button {
+	width: 16rem;
+	padding: .8rem !important;
+  align-self: flex-end;
+  font-size: var(--text-5) !important;
 }
 
 .product-caption {

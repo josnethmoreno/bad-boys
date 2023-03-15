@@ -5,6 +5,7 @@ export default function Home() {
 	return (
 		<main>
 			<Hero />
+			{/* @ts-expect-error Server Component */}
 			<Shop />
 		</main>
 	)

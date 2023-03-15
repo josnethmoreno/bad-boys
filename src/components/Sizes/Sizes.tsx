@@ -30,14 +30,13 @@ export default function Sizes({ sizes }: Props) {
 			<div>
 				{sizes.map((s: Size) => (
 					<button
-						key={s.size}
+						key={s.id}
 						className={`${style['size-button']} size`}
 						onClick={(e) => handleSize(s.size, e)}>
 						{s.size}
 					</button>
 				))}
 			</div>
-			<Button text='Add to cart' type='fill' />
 		</div>
 	)
 }

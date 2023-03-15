@@ -1,36 +1,73 @@
 import style from './page.module.css'
 
-import Button from '@/components/Button/Button'
+import { notFound } from 'next/navigation'
 import Image from 'next/image'
-
-import { getProducts } from '@/services/products.service'
+import Button from '@/components/Button/Button'
 import Sizes from '@/components/Sizes/Sizes'
 import Styles from '@/components/Styles/Styles'
 
-export default function Product() {
+import {
+	getProducts,
+	getProduct,
+	ProductInterface,
+	ImageElement,
+} from '@/services/products.service'
+
+interface PageProps {
+	params: {
+		slug: string
+	}
+}
+
+export async function generateStaticParams() {
+	const data = await getProducts()
+	const products = await data.docs.reverse()
+	return products.map((product: ProductInterface) => ({
+		id: product.id,
+		slug: product.slug,
+	}))
+}
+
+async function getPageFromSlug(slug: string) {
+	const data = await getProducts()
+	const products = await data.docs.reverse()
+
+	const page = await products.find((p: ProductInterface) => p.slug === slug)
+
+	if (!page) {
+		return null
+	}
+
+	return page
+}
+
+export default async function Product({ params }: PageProps) {
+	const { slug } = params
+	const page = await getPageFromSlug(slug)
+
+	if (!page) {
+		return notFound()
+	}
+
 	return (
 		<section className={style.product}>
 			<div className={style['product-media']}>
-				<figure>
-					<Image src='/shop/1.png' fill={true} alt=''></Image>
-				</figure>
-				<figure>
-					<Image src='/shop/2.png' fill={true} alt=''></Image>
-				</figure>
-				<figure>
-					<Image src='/shop/1.png' fill={true} alt=''></Image>
-				</figure>
-				<figure>
-					<Image src='/shop/2.png' fill={true} alt=''></Image>
-				</figure>
+				{page.images.map((img: ImageElement, i: number) => (
+					<figure key={img.id}>
+						<Image src={img.image.url} fill={true} alt={img.image.alt}></Image>
+					</figure>
+				))}
 			</div>
 			<div className={style['product-info']}>
 				<header className={style['product-header']}>
-					<h3>BB 25TH ANNIVERSARY TEE</h3>
-					<span>$35.00</span>
+					<h3>{page.name}</h3>
+					<span>{`$${page.price}.00`}</span>
 				</header>
-				<Styles styles={[{style: 'lime', id: 'adasd'}, {style: 'grey', id: 'adasd'}]}/>
-				<Sizes sizes={[{size: 'sm', id: 'adasd'}, {size: 'md', id: 'adasd'}]} />
+				{page.styles.length === 0 ? <div></div> : <Styles styles={page.styles} />}
+				<div className={style['product-container']}>
+					{page.sizes.length === 0 ? <div></div> : <Sizes sizes={page.sizes} />}
+					<Button text='Add to cart' type='fill' />
+				</div>
 				<div className={style['product-caption']}>
 					We ride together. We die together. We got the whole damn story printed
 					on the back of this tee. Featuring the official 25th Anniversary logo

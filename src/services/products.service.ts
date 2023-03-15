@@ -6,10 +6,10 @@ const getProducts = async () => {
   return res.json()
 }
 
-const getProduct = async (id: number) => {
-  const res = await fetch(url + id)
-  if(!res.ok) { throw new Error('Failed to fetch data')}
-  return res.json()
+const getProduct = async (slug: string) => {
+  const products = await getProducts()
+  const product = products.docs.find((p: ProductInterface) => p.slug === slug)
+  return product 
 }
 
 export interface ProductInterface {

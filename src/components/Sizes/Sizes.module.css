@@ -43,7 +43,7 @@
   background-color: var(--lighter-color);
 }
 
-.size-button:focus {
+.size-button[data-active="true"] {
 	background-color: var(--fg-color);
 	color: var(--bg-color);
 }

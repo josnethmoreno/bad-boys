@@ -8,15 +8,20 @@ interface Props {
 }
 
 export interface Size {
-  size: string;
-  id:   string;
+	size: string
+	id: string
 }
 
 export default function Sizes({ sizes }: Props) {
 	const [selectStyle, setSelectStyle] = useState('')
 
-	const handleSize = (s: string) => {
+	const handleSize = (s: string, e: MouseEvent) => {
 		setSelectStyle(s)
+		const buttons = document.querySelectorAll('.size')
+		buttons.forEach((b) => {
+			b.setAttribute('data-active', 'false')
+		})
+		e.currentTarget.setAttribute('data-active', 'true')
 	}
 
 	return (
@@ -24,7 +29,10 @@ export default function Sizes({ sizes }: Props) {
 			<span>Size: {selectStyle} </span>
 			<div>
 				{sizes.map((s: Size) => (
-					<button key={s.size} className={style['size-button']} onClick={() => handleSize(s.size)}>
+					<button
+						key={s.size}
+						className={`${style['size-button']} size`}
+						onClick={(e) => handleSize(s.size, e)}>
 						{s.size}
 					</button>
 				))}

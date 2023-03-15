@@ -7,22 +7,30 @@ interface Props {
 }
 
 export interface Style {
-  style: string;
-  id:    string;
+	style: string
+	id: string
 }
 
 export default function Styles({ styles }: Props) {
 	const [selectStyle, setSelectStyle] = useState('')
 
-	const handleStyle = (s: string) => {
+	const handleStyle = (s: string, e: MouseEvent) => {
 		setSelectStyle(s)
+		const styles = document.querySelectorAll('.style')
+		styles.forEach(s => s.setAttribute('data-active', 'false'))
+		e.currentTarget.setAttribute('data-active', 'true')
 	}
 
 	return (
 		<div className={style.styles}>
 			<span>Style: {selectStyle}</span>
 			{styles.map((s) => (
-				<button key={s.style} data-style={s.style.toLowerCase()} data-active={false} onClick={() => handleStyle(s.style)}></button>
+				<button
+					key={s.style}
+					className='style'
+					data-style={s.style.toLowerCase()}
+					data-active={false}
+					onClick={(e) => handleStyle(s.style, e)}></button>
 			))}
 		</div>
 	)

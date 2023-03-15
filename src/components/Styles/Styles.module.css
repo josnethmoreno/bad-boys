@@ -1,0 +1,42 @@
+.styles {
+	--black: #000000;
+	--oatmeal: #c1c1bb;
+	--grey: #b9b9b3;
+	--lime: #bab77b;
+  display: flex;
+  flex-wrap: wrap;
+  gap: .8rem 1rem;
+}
+
+.styles span{
+  width: 100%;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+.styles button {
+	width: 3.3rem;
+	height: 3.3rem;
+	border-radius: 50%;
+	aspect-ratio: 1 / 1;
+}
+
+.styles button:focus {
+  outline: .4rem solid var(--fg-color);
+}
+
+.styles button[data-style='black'] {
+	background-color: var(--black);
+}
+
+.styles button[data-style='oatmeal'] {
+	background-color: var(--oatmeal);
+}
+
+.styles button[data-style='grey'] {
+	background-color: var(--grey);
+}
+
+.styles button[data-style='lime'] {
+	background-color: var(--lime);
+}

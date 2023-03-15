@@ -1,7 +1,11 @@
+import style from './page.module.css'
+
 import Button from '@/components/Button/Button'
 import Image from 'next/image'
 
-import style from './page.module.css'
+import { getProducts } from '@/services/products.service'
+import Sizes from '@/components/Sizes/Sizes'
+import Styles from '@/components/Styles/Styles'
 
 export default function Product() {
 	return (
@@ -25,22 +29,14 @@ export default function Product() {
 					<h3>BB 25TH ANNIVERSARY TEE</h3>
 					<span>$35.00</span>
 				</header>
-				<div className={style['product-style']}>
-					<span>Style: Lime</span>
-						<button key='1' data-style='lime' data-active='false'></button>
-				</div>
-				<div className={style['product-size']}>
-					<span>Size: SM </span>
-					<div>
-							<button key='2' className={style['size-button']} data-active=''>SM</button>
-					</div>
-					<Button text='Add to cart' type='fill' />
-				</div>
+				<Styles styles={[{style: 'lime', id: 'adasd'}, {style: 'grey', id: 'adasd'}]}/>
+				<Sizes sizes={[{size: 'sm', id: 'adasd'}, {size: 'md', id: 'adasd'}]} />
 				<div className={style['product-caption']}>
 					We ride together. We die together. We got the whole damn story printed
 					on the back of this tee. Featuring the official 25th Anniversary logo
 					on the front. White ink printed on black cotton. Available for 10 days
-					only. <br></br><br></br> 🙏 This is a limited edition production run. Printing starts
+					only. <br></br>
+					<br></br> 🙏 This is a limited edition production run. Printing starts
 					when the drop ends. Reminder: Bad Boys for Life. Shipping may take 10+
 					days due to COVID-19.
 				</div>

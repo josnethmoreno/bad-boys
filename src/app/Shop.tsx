@@ -20,6 +20,7 @@ export default async function Shop() {
 						url={p.slug}
 						img={p.images[0].image.url}
 						title={p.name}
+						priority={true}
 					/>
 				))}
 			</div>
@@ -35,6 +36,7 @@ export default async function Shop() {
 						url={p.name.toLowerCase().replaceAll(' ', '-')}
 						img={p.images[0].image.url}
 						title={p.name}
+						priority={false}
 					/>
 				))}
 			</div>
@@ -49,6 +51,7 @@ export default async function Shop() {
 						url={p.name.toLowerCase().replaceAll(' ', '-')}
 						img={p.images[0].image.url}
 						title={p.name}
+						priority={false}
 					/>
 				))}
 			</div>

@@ -54,7 +54,12 @@ export default async function Product({ params }: PageProps) {
 			<div className={style['product-media']}>
 				{page.images.map((img: ImageElement, i: number) => (
 					<figure key={img.id}>
-						<Image src={img.image.url} fill={true} alt={img.image.alt}></Image>
+						<Image
+							src={img.image.url}
+							fill={true}
+							alt={img.image.alt}
+							sizes='(max-width: 768px) 50vw, (max-width: 1200px) 50vw, 50vw'
+							priority={true}></Image>
 					</figure>
 				))}
 			</div>
@@ -63,7 +68,11 @@ export default async function Product({ params }: PageProps) {
 					<h3>{page.name}</h3>
 					<span>{`$${page.price}.00`}</span>
 				</header>
-				{page.styles.length === 0 ? <div></div> : <Styles styles={page.styles} />}
+				{page.styles.length === 0 ? (
+					<div></div>
+				) : (
+					<Styles styles={page.styles} />
+				)}
 				<div className={style['product-container']}>
 					{page.sizes.length === 0 ? <div></div> : <Sizes sizes={page.sizes} />}
 					<Button text='Add to cart' type='fill' />

@@ -3,10 +3,10 @@ import style from './page.module.css'
 import { notFound } from 'next/navigation'
 import Product from '@/components/product/Product/Product'
 
-import {
-	getProducts,
-	ProductInterface,
-} from '@/services/products.service'
+import Metadata from 'next'
+
+import { getProducts, ProductInterface } from '@/services/products.service'
+import next from 'next'
 
 interface PageProps {
 	params: {
@@ -14,15 +14,7 @@ interface PageProps {
 	}
 }
 
-export async function generateStaticParams() {
-	const data = await getProducts()
-	const products = await data.docs.reverse()
-	return products.map((product: ProductInterface) => ({
-		slug: product.slug,
-	}))
-}
-
-async function getPageFromSlug(slug: string) {
+async function getPageFromParams(slug: string) {
 	const data = await getProducts()
 	const products = await data.docs.reverse()
 
@@ -35,9 +27,17 @@ async function getPageFromSlug(slug: string) {
 	return page
 }
 
+export async function generateStaticParams() {
+	const data = await getProducts()
+	const products = await data.docs.reverse()
+	return products.map((product: ProductInterface) => ({
+		slug: product.slug,
+	}))
+}
+
 export default async function page({ params }: PageProps) {
-	const {slug} = params
-	const product = await getPageFromSlug(slug)
+	const { slug } = params
+	const product = await getPageFromParams(slug)
 
 	if (!product) {
 		return notFound()

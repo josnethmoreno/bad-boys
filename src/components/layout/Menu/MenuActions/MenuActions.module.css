@@ -1,0 +1,40 @@
+.menu-actions {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.menu-actions > button{
+  color: var(--fg-color);
+  font-size: var(--text-5);
+  text-transform: uppercase;
+  text-align: left;
+  font-weight: 500;
+}
+
+.menu-theme {
+  display: flex;
+  gap: .5rem;
+}
+
+.menu-theme button {
+  width: 1.2rem;
+  height: 1.2rem;
+  border-radius: 50%;
+  border: 1px solid transparent;
+}
+
+.menu-theme button[data-theme="black"] {
+  border-color: var(--white);
+  background-color: var(--black);
+}
+
+.menu-theme button[data-theme="white"] {
+  border-color: var(--black);
+  background-color: var(--white);
+}
+
+.menu-theme button[data-theme="artic"] {
+  border-color: var(--fg-color);
+  background-color: var(--artic-lime);
+}

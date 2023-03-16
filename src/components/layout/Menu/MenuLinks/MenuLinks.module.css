@@ -1,0 +1,16 @@
+.menu-links {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.menu-links ul {
+  display: flex;
+  gap: 3rem;
+  font-size: var(--text-5);
+}
+
+.menu-links span {
+  font-size: var(--text-small);
+  line-height: 1.2;
+}

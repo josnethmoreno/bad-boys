@@ -2,9 +2,9 @@ import style from './page.module.css'
 
 import { notFound } from 'next/navigation'
 import Image from 'next/image'
-import Button from '@/components/Button/Button'
-import Sizes from '@/components/Sizes/Sizes'
-import Styles from '@/components/Styles/Styles'
+import Button from '@/components/ui/Button/Button'
+import Sizes from '@/components/product/Product/ProductSizes/Sizes'
+import Styles from '@/components/product/Product/ProductStyles/Styles'
 
 import {
 	getProducts,

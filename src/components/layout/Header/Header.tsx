@@ -5,9 +5,9 @@ import { useState } from 'react'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 
-import { Logotipo } from '../Icons/Icons'
-import Anchor from '../Anchor/Anchor'
-import Cart from '../Cart/Cart'
+import { Logotipo } from '../../icons/Icons/Icons'
+import Anchor from '../../ui/Anchor/Anchor'
+import Cart from '@/components/cart/Cart/Cart'
 
 export default function Header() {
 	const [showCart, setShowCart] = useState<Boolean>(false)

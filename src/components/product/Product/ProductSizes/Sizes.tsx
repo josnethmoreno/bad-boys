@@ -1,7 +1,7 @@
 'use client'
 import style from './Sizes.module.css'
 import { MouseEvent, useState } from 'react'
-import Button from '../Button/Button'
+import Button from '../../ui/Anchor/Button/Button'
 
 interface Props {
 	sizes: Size[]

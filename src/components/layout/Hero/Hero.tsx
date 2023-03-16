@@ -1,4 +1,4 @@
-import { Logotipo } from '../Icons/Icons'
+import { Logotipo } from '@/components/icons/Icons/Icons'
 import style from './Hero.module.css'
 
 export default function Hero() {

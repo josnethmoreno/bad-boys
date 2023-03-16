@@ -1,5 +1,5 @@
-import Button from '../Button/Button'
-import { Close, Lines, Barcode, Palmer } from '../Icons/Icons'
+import Button from '@/components/ui/Button/Button'
+import { Close, Lines, Barcode, Palmer } from '@/components/icons/Icons/Icons'
 
 import style from './Cart.module.css'
 

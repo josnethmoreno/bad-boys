@@ -1,8 +1,8 @@
 import style from './Shop.module.css'
 
-import Product from '@/components/Product/Product'
-import Marquee from '@/components/Marquee/Marquee'
-import Jumbo from '@/components/Jumbo/Jumbo'
+import Product from '@/components/ui/Product/Product'
+import Marquee from '@/components/ui/Marquee/Marquee'
+import Jumbo from '@/components/ui/Jumbo/Jumbo'
 
 import { getProducts } from '@/services/products.service'
 import { ProductInterface } from '@/services/products.service'

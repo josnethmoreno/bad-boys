@@ -1,9 +1,8 @@
 'use client'
 
 import style from './Footer.module.css'
-
-import Button from '../Button/Button'
-import Anchor from '../Anchor/Anchor'
+import Button from '@/components/ui/Button/Button'
+import Anchor from '@/components/ui/Anchor/Anchor'
 
 export function Form() {
 	return (

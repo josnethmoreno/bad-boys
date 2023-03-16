@@ -1,6 +1,6 @@
 'use client'
 import { MouseEvent, useState, useRef } from 'react'
-import style from './Styles.module.css'
+import style from './ProductStyles.module.css'
 
 interface Props {
 	styles: Style[]

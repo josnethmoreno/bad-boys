@@ -1,0 +1,49 @@
+.product-info {
+	position: sticky;
+	top: 0;
+  display: flex;
+  flex-flow: column;
+  gap: 1.8rem 0;
+	padding: 0 1rem;
+	height: 100vh;
+}
+
+.product-header {
+	display: flex;
+	justify-content: space-between;
+	font-size: var(--text-2);
+}
+
+.product-header h3 {
+  padding-top: 0.4rem;
+	max-width: 20ch;
+  line-height: 1;
+	font-weight: 500;
+}
+
+.product-header span {
+	font-weight: 500;
+	font-size: var(--text-2);
+}
+
+.product-container {
+	display: flex;
+	justify-content: space-between;
+}
+
+.product-container > button {
+	padding: .8rem 3rem!important;
+	white-space: nowrap;
+  align-self: flex-end;
+  font-size: var(--text-5) !important;
+}
+
+.product-caption {
+	font-size: var(--text-5);
+	font-weight: 500;
+	white-space: pre-wrap;
+}
+
+.product-space {
+	height: 4rem;
+}

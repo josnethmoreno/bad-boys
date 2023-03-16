@@ -1,0 +1,12 @@
+.product-images {
+	display: flex;
+	flex-flow: column;
+	gap: 1rem;
+	padding-top: 0.5rem;
+}
+
+.product-images figure {
+	position: relative;
+	aspect-ratio: 1 / 1;
+	background-color: var(--fg-color);
+}

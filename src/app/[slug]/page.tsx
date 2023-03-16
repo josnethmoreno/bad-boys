@@ -49,6 +49,8 @@ export default async function Product({ params }: PageProps) {
 		return notFound()
 	}
 
+	console.log(page.description)
+
 	return (
 		<section className={style.product}>
 			<div className={style['product-media']}>
@@ -69,23 +71,15 @@ export default async function Product({ params }: PageProps) {
 					<span>{`$${page.price}.00`}</span>
 				</header>
 				{page.styles.length === 0 ? (
-					<div></div>
+					<div className={style['product-space']}></div>
 				) : (
 					<Styles styles={page.styles} />
 				)}
 				<div className={style['product-container']}>
-					{page.sizes.length === 0 ? <div></div> : <Sizes sizes={page.sizes} />}
+					{page.sizes.length === 0 ? <div className={style['product-space']}></div> : <Sizes sizes={page.sizes} />}
 					<Button text='Add to cart' type='fill' />
 				</div>
-				<div className={style['product-caption']}>
-					We ride together. We die together. We got the whole damn story printed
-					on the back of this tee. Featuring the official 25th Anniversary logo
-					on the front. White ink printed on black cotton. Available for 10 days
-					only. <br></br>
-					<br></br> 🙏 This is a limited edition production run. Printing starts
-					when the drop ends. Reminder: Bad Boys for Life. Shipping may take 10+
-					days due to COVID-19.
-				</div>
+				<div className={style['product-caption']}>{page.description}</div>
 			</div>
 		</section>
 	)

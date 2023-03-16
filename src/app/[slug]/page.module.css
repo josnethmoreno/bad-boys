@@ -59,4 +59,9 @@
 .product-caption {
 	font-size: var(--text-5);
 	font-weight: 500;
+	white-space: pre-wrap;
+}
+
+.product-space {
+	height: 4rem;
 }

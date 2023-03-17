@@ -22,6 +22,13 @@ export async function generateStaticParams() {
 	}))
 }
 
+export async function generateMetadata({ params }: PageProps) {
+	const product = await getPageFromSlug(params.sl)
+	return {
+		title: product.title,
+	}
+}
+
 async function getPageFromSlug(slug: string) {
 	const data = await getProducts()
 	const products = await data.docs.reverse()

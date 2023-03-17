@@ -26,7 +26,7 @@
   text-transform: uppercase;
   font-weight: 500;
   font-size: var(--text-5);
-  transition: .3s;
+  transition: .3s background-color;
 }
 
 .size-button:last-of-type{

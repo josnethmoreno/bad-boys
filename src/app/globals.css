@@ -57,4 +57,5 @@ body {
 	padding: 0 var(--spacer-2);
 	color: var(--fg-color);
 	background-color: var(--bg-color);
+	transition: .3s background-color;
 }

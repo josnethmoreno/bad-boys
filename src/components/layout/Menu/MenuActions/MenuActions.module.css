@@ -29,7 +29,7 @@
   background-color: var(--black);
 }
 
-.menu-theme button[data-theme="white"] {
+.menu-theme button[data-theme="light"] {
   border-color: var(--black);
   background-color: var(--white);
 }

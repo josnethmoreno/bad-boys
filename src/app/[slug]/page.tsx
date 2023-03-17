@@ -21,7 +21,10 @@ export async function generateStaticParams() {
 
 export async function generateMetadata({ params }: PageProps) {
   const product = await getProductFromParams(params.slug);
-  return { title: product.title }
+  return { 
+		title: product.name,
+		description: product.description 
+	}
 }
 
 async function getProductFromParams(slug: string) {

@@ -6,7 +6,7 @@ export interface PropsThemeStore {
 }
 
 export const useThemeStore = create<PropsThemeStore>((set) => ({
-  theme: 'light',
+  theme: 'dark',
   change: (value: string) => {
     set({ theme: value})
   }

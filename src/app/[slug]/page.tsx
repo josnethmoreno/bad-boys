@@ -52,7 +52,7 @@ export default async function page({ params }: PageProps) {
 	}
 
 	return (
-		<section>
+		<section suppressHydrationWarning>
 			<Product product={product} />
 		</section>
 	)

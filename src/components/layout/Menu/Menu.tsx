@@ -5,7 +5,7 @@ import MenuBrand from './MenuBrand/MenuBrand'
 import MenuLinks from './MenuLinks/MenuLinks'
 import MenuActions from './MenuActions/MenuActions'
 
-export default function Nav() {
+export default function Menu() {
 	return (
 		<nav className={style.menu}>
 			<MenuBrand />

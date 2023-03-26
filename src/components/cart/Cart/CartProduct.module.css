@@ -1,0 +1,31 @@
+.cartProduct {
+  display: flex;
+  gap: 1rem;
+}
+
+.cartProduct-img {
+  position: relative;
+  width: 4rem;
+  height: 4rem;
+  aspect-ratio: 1 / 1;
+}
+
+.cartProduct-img img{
+  background-color: var(--fg-color);
+  border-radius: 10px;
+}
+
+.cartProduct-data {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.cartProduct-data div {
+  display: flex;
+  gap: 1rem;
+}
+
+.cartProduct > p {
+  align-items: end;
+}

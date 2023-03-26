@@ -4,6 +4,7 @@ import Button from '@/components/ui/Button/Button'
 import { Close, Lines, Barcode, Palmer } from '@/components/icons/Icons/Icons'
 
 import { useToggleCart } from '@/store/cartStore'
+import { CartProduct } from './CartProduct'
 
 
 export default function Cart() {
@@ -22,6 +23,9 @@ export default function Cart() {
         </button>
       </header>
       <div className={style['cart-products']}>
+        <CartProduct image={'/shop/1.png'} name={'BB Hoodie'} size={'xl'} price={2}></CartProduct>
+        <CartProduct image={'/shop/1.png'} name={'BB Hoodie'} color={'grey'} size={'xl'} price={2}></CartProduct>
+        <CartProduct image={'/shop/1.png'} name={'BB Hoodie'} color={'grey'} size={'xl'} price={2}></CartProduct>
       </div>
       <footer className={style['cart-footer']}>
         <Button text="Continue to payment" type="fill"></Button>
